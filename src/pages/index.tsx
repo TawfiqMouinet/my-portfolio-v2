@@ -100,7 +100,9 @@ export default function Home() {
           id="about"
           className="text-6xl mt-10 h-screen w-screen relative z-20 cursor-none pt-20"
         >
-          <h1 className="px-6 pt-3 mb-3 font-mono">Hi! I'm Tawfiq Mouinet</h1>
+          <h1 className="px-6 pt-3 mb-3 font-mono">
+            Hi! I&apos;m Tawfiq Mouinet
+          </h1>
           <h1 className="px-6 whitespace-nowrap overflow-hidden font-mono relative leading-[1.5]">
             <div>I am a</div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 block font-extrabold font-sans uppercase overflow-hidden left-60 absolute pl-2 animate-textslide shadow-lg shadow-purple-500">
