@@ -59,7 +59,6 @@ export default function Home() {
     function handleWindowResize() {
       setWindowHeight(window.innerHeight);
       setWindowWidth(window.innerWidth);
-      console.log(windowWidth + "  " + windowHeight);
     }
     window.addEventListener("resize", handleWindowResize);
     return () => {
