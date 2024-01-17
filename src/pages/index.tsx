@@ -29,7 +29,7 @@ export default function Home() {
     top: 0,
   });
   const [windowHeight, setWindowHeight] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(985);
   useEffect(() => {
     if (windowWidth > 980) {
       const anchor: HTMLElement = document.getElementById("anchor")!;
