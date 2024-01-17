@@ -3,16 +3,16 @@
 }
 
 .eye1 {
-  top: 344px;
-  right: 134px;
+  top: 66px;
+  right: 106px;
   width: 75px;
   position: absolute;
   z-index: 20;
   pointer-events: none;
 }
 .eye2 {
-  top: 347px;
-  right: 189px;
+  top: 70px;
+  right: 158px;
   width: 75px;
   position: absolute;
   z-index: 20;

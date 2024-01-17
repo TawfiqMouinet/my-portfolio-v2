@@ -117,15 +117,44 @@ export default function Home() {
               </div>
             </div>
           </h1>
+
           <h2 className="text-4xl p-2 ml-4 mt-6 bg-gradient-to-r font-mono w-60 from-purple-800 bg-clip-text text-transparent to-blue-600 font-semibold ">
             About Me:
           </h2>
-          <p className="text-2xl w-3/5 ml-8 text-justify mt-5 font-mono">
-            I am a budding, but passionate, fullstack web-developer who loves
-            transforming ideas into fun and engaging online experiences. I am
-            always eager to broaden my horizons and learn as much as I can, as
-            quickly as I can!
-          </p>
+          <div className="flex flex-row">
+            <p className="text-2xl w-3/5 ml-8 text-justify mt-5 font-mono">
+              I am a budding, but passionate, fullstack web-developer who loves
+              transforming ideas into fun and engaging online experiences. I am
+              always eager to broaden my horizons and learn as much as I can, as
+              quickly as I can!
+            </p>
+
+            <div
+              onMouseMove={(ev) => handleMouseMove(ev)}
+              className="relative w-[350px] h-[350px] left-20 bottom-10"
+            >
+              <img
+                id="anchor"
+                src="tm.png"
+                alt="Wow, sir"
+                className="w-[350px] absolute shadow-lg z-30 shadow-blue-800 mt-1 blur-md border-2 border-blue-800 rounded-full hover:shadow-2xl hover:shadow-purple-800 hover:border-purple-800 hover:scale-110 hover:blur-none hover:-translate-y-3 hover:z-10 duration-500 ease-in-out  transition-all "
+              />
+              <div id="eyes">
+                <img
+                  id="eye1"
+                  src="3wina.png"
+                  alt="wow, sir"
+                  className="eye1"
+                />
+                <img
+                  id="eye2"
+                  src="3wina.png"
+                  alt="wow, sir"
+                  className="eye2"
+                />
+              </div>
+            </div>
+          </div>
           <a
             href="https://github.com/TawfiqMouinet"
             target="_blank"
@@ -133,18 +162,6 @@ export default function Home() {
           >
             <FaGithub className="ml-96 mt-7 hover:scale-125 cursor-none hover:text-purple-800 hover:translate-y-1 transition-all duration-300" />
           </a>
-          <div onMouseMove={(ev) => handleMouseMove(ev)} className="">
-            <img
-              id="anchor"
-              src="tm.png"
-              alt="Wow, sir"
-              className="w-[350px] absolute shadow-lg z-30 shadow-blue-800 mt-1 blur-md border-2 border-blue-800 rounded-full right-7 bottom-4 hover:shadow-2xl hover:shadow-purple-800 hover:border-purple-800 hover:scale-110 hover:blur-none hover:-translate-y-3 hover:z-10 duration-500 ease-in-out  transition-all "
-            />
-            <div id="eyes">
-              <img id="eye1" src="3wina.png" alt="wow, sir" className="eye1" />
-              <img id="eye2" src="3wina.png" alt="wow, sir" className="eye2" />
-            </div>
-          </div>
         </section>
         <div className="bg-inherit w-screen">
           <section
