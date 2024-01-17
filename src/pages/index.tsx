@@ -54,7 +54,7 @@ export default function Home() {
 
   return (
     <main
-      className="flex h-screen w-screen flex-col bg-[#091010] scroll-smooth overflow-scroll"
+      className="flex h-screen w-screen flex-col text-white bg-[#091010] scroll-smooth overflow-scroll"
       onMouseMove={(ev) => handleMouseMove(ev)}
     >
       <svg width="0" height="0">
@@ -121,14 +121,13 @@ export default function Home() {
           <h2 className="text-4xl p-2 ml-4 mt-6 bg-gradient-to-r font-mono w-60 from-purple-800 bg-clip-text text-transparent to-blue-600 font-semibold ">
             About Me:
           </h2>
-          <div className="flex flex-row">
+          <div className="flex flex-row flex-wrap">
             <p className="text-2xl w-3/5 ml-8 text-justify mt-5 font-mono">
               I am a budding, but passionate, fullstack web-developer who loves
               transforming ideas into fun and engaging online experiences. I am
               always eager to broaden my horizons and learn as much as I can, as
               quickly as I can!
             </p>
-
             <div
               onMouseMove={(ev) => handleMouseMove(ev)}
               className="relative w-[350px] h-[350px] left-20 bottom-10"
@@ -154,14 +153,14 @@ export default function Home() {
                 />
               </div>
             </div>
+            <a
+              href="https://github.com/TawfiqMouinet"
+              target="_blank"
+              className="cursor-none absolute bottom-3"
+            >
+              <FaGithub className="ml-96 mt-7 z-50 hover:scale-125 cursor-none hover:text-purple-800 hover:translate-y-1 transition-all duration-300" />
+            </a>
           </div>
-          <a
-            href="https://github.com/TawfiqMouinet"
-            target="_blank"
-            className="cursor-none"
-          >
-            <FaGithub className="ml-96 mt-7 hover:scale-125 cursor-none hover:text-purple-800 hover:translate-y-1 transition-all duration-300" />
-          </a>
         </section>
         <div className="bg-inherit w-screen">
           <section
