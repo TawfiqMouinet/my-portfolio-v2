@@ -1,4 +1,4 @@
-import { MouseEvent, useEffect, useState } from "react";
+import { MouseEvent, useEffect, useRef, useState } from "react";
 import {
   FaReact,
   FaPython,
@@ -28,16 +28,20 @@ export default function Home() {
     left: 0,
     top: 0,
   });
+  const [windowHeight, setWindowHeight] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
-    const anchor: HTMLElement = document.getElementById("anchor")!;
-    const rect: DOMRect = anchor?.getBoundingClientRect();
-    const anchorX: number = rect.left + rect?.width / 2;
-    const anchorY: number = rect.top + rect?.width / 2;
-    const angleRad = angle(mousePos.left, mousePos.top, anchorX, anchorY);
-    const eye1: HTMLElement = document.getElementById("eye1")!;
-    const eye2: HTMLElement = document.getElementById("eye2")!;
-    eye1.style.transform = `rotate(${90 + angleRad}rad)`;
-    eye2.style.transform = `rotate(${90 + angleRad}rad)`;
+    if (windowWidth > 980) {
+      const anchor: HTMLElement = document.getElementById("anchor")!;
+      const rect: DOMRect = anchor?.getBoundingClientRect();
+      const anchorX: number = rect.left + rect?.width / 2;
+      const anchorY: number = rect.top + rect?.width / 2;
+      const angleRad = angle(mousePos.left, mousePos.top, anchorX, anchorY);
+      const eye1: HTMLElement = document.getElementById("eye1")!;
+      const eye2: HTMLElement = document.getElementById("eye2")!;
+      eye1.style.transform = `rotate(${90 + angleRad}rad)`;
+      eye2.style.transform = `rotate(${90 + angleRad}rad)`;
+    }
   });
 
   function angle(cx: number, cy: number, ex: number, ey: number) {
@@ -49,7 +53,31 @@ export default function Home() {
 
   function handleMouseMove(ev: MouseEvent) {
     setMousePos({ left: ev.pageX, top: ev.pageY });
-    console.log("X: " + mousePos.left + " Y: " + mousePos.top);
+  }
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowHeight(window.innerHeight);
+      setWindowWidth(window.innerWidth);
+      console.log(windowWidth + "  " + windowHeight);
+    }
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, [windowHeight, windowWidth]);
+
+  if (windowWidth < 980) {
+    return (
+      <div className="flex flex-col items-center justify-center h-screen w-screen px-24">
+        <p className="text-3xl md:text-5xl font-semibold text-white mb-4 text-center">
+          For a better user experience, please visit the website in desktop view
+        </p>
+        <p className="text-xl font-base text-gray-400 text-center">
+          Tawfiq Mouinet
+        </p>
+      </div>
+    );
   }
 
   return (
