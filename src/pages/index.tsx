@@ -28,8 +28,8 @@ export default function Home() {
     left: 0,
     top: 0,
   });
-  const [windowHeight, setWindowHeight] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(985);
+  const [windowHeight, setWindowHeight] = useState<number>(0);
+  const [windowWidth, setWindowWidth] = useState<number>(985);
   useEffect(() => {
     if (windowWidth > 980) {
       const anchor: HTMLElement = document.getElementById("anchor")!;
@@ -42,7 +42,7 @@ export default function Home() {
       eye1.style.transform = `rotate(${90 + angleRad}rad)`;
       eye2.style.transform = `rotate(${90 + angleRad}rad)`;
     }
-  });
+  }, [mousePos.left, mousePos.top, windowWidth]);
 
   function angle(cx: number, cy: number, ex: number, ey: number) {
     const dy = ey - cy;
@@ -56,6 +56,12 @@ export default function Home() {
   }
 
   useEffect(() => {
+    setWindowHeight(window.innerHeight);
+    setWindowWidth(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
+    console.log("UseEffect Fired");
     function handleWindowResize() {
       setWindowHeight(window.innerHeight);
       setWindowWidth(window.innerWidth);
