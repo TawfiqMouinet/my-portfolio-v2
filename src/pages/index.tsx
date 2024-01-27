@@ -107,7 +107,7 @@ export default function Home() {
         }}
       ></div>
       <header className="top-0 bg-inherit border-white flex px-2 py-2 z-50 justify-between sticky h-24 w-screen ">
-        <h1 className="text-3xl mt-2">Developed By Tawfiq</h1>
+        <h1 className="text-3xl p-5">Tawfiq Mouinet </h1>
         <ul className="flex">
           <li>
             <a href="#about">
@@ -131,7 +131,7 @@ export default function Home() {
       <div className="bg-inherit w-screen">
         <section
           id="about"
-          className="text-6xl mt-10 h-screen w-screen relative z-20 cursor-none pt-20"
+          className="text-6xl mt-10 px-5 w-screen relative z-20 cursor-none pt-20"
         >
           <h1 className="px-6 pt-3 mb-3 font-mono">
             Hi! I&apos;m Tawfiq Mouinet
@@ -151,11 +151,11 @@ export default function Home() {
             </div>
           </h1>
 
-          <h2 className="text-4xl p-2 ml-4 mt-6 bg-gradient-to-r font-mono w-60 from-purple-800 bg-clip-text text-transparent to-blue-600 font-semibold ">
+          <h2 className="text-4xl p-2 ml-4 mr-5 mt-6 bg-gradient-to-r font-mono w-60 from-purple-800 bg-clip-text text-transparent to-blue-600 font-semibold ">
             About Me:
           </h2>
-          <div className="flex flex-row flex-wrap">
-            <p className="text-2xl w-3/5 ml-8 text-justify mt-5 font-mono">
+          <div className="flex flex-row flex-wrap  pr-16">
+            <p className="text-2xl w-3/5 pl-8 text-justify mt-5 font-mono">
               I am a budding, but passionate, fullstack web-developer who loves
               transforming ideas into fun and engaging online experiences. I am
               always eager to broaden my horizons and learn as much as I can, as
@@ -163,7 +163,7 @@ export default function Home() {
             </p>
             <div
               onMouseMove={(ev) => handleMouseMove(ev)}
-              className="relative w-[350px] h-[350px] left-20 bottom-10"
+              className="relative w-[350px] h-[350px] left-20 bottom-10 pr-10"
             >
               <img
                 id="anchor"
@@ -200,7 +200,7 @@ export default function Home() {
             id="projects"
             className="h-screen w-screen z-20 mt-10 pt-20 relative overflow-x-clip cursor-none"
           >
-            <h2 className="text-4xl cursor-none p-2 ml-4 mt-6 bg-gradient-to-r font-mono mb-5 text-center from-purple-800 bg-clip-text text-transparent to-blue-600 font-semibold ">
+            <h2 className="text-4xl cursor-none p-2 mb-16 ml-4 mt-6 bg-gradient-to-r font-mono text-center from-purple-800 bg-clip-text text-transparent to-blue-600 font-semibold ">
               <a
                 href="https://memento-learninglog.vercel.app"
                 target="_blank"
@@ -209,13 +209,13 @@ export default function Home() {
                 Memento Learning Log
               </a>
             </h2>
-            <div className="flex flex-row">
+            <div className="flex flex-row gap-10 mx-10">
               <img
                 src="memento0.png"
                 alt="wow, sir"
-                className="object-fill w-[55%] ml-3 self-start rounded-md flex-none shadow-md shadow-purple-800"
+                className="object-fill w-[55%] self-start rounded-md flex-none shadow-md shadow-purple-800"
               />
-              <p className="w-[45%] text-xl font-mono ml-3 text-justify mr-2 mt-24 ">
+              <p className="w-[45%] text-2xl font-mono ml-3 text-justify mt-10 ">
                 Memento is a learning log web application that allows its users
                 to log the topics they are interested in and to make journal
                 entries as they learn about each of them. It was developed using
@@ -225,18 +225,18 @@ export default function Home() {
           </section>
         </div>
         <div className="bg-inherit w-screen">
-          <section className="h-screen z-20 relative flex-wrap flex flex-row pt-20 w-screen overflow-x-clip cursor-none">
+          <section className="h-screen z-20 relative flex-wrap flex flex-row pt-20 w-screen gap-y-16 overflow-x-clip cursor-none">
             <img
               src="memento1.png"
               alt=""
-              className="flex-none rounded-md self-start ml-3 w-[55%] shadow-md shadow-purple-800"
+              className="flex-none rounded-md self-start ml-10 w-[55%] shadow-md shadow-purple-800"
             />
-            <p className="w-[40%] text-2xl font-mono text-justify ml-3 mt-10">
+            <p className="w-[40%] text-2xl font-mono ml-3 pl-10 mt-10 pr-10">
               You can track your learning journey while keeping your entries
-              organized chronologically, alphabetically, or by number of
-              entries.
+              organized chronologically, by number of entries, or
+              alphabetically.
             </p>
-            <p className="text-2xl w-[40%] ml-72 font-mono text-justify">
+            <p className="text-2xl w-[40%] ml-72 pr-10 font-mono text-justify">
               A simple, elegant, and intuitive user interface ensures high ease
               of use.
             </p>
@@ -250,31 +250,31 @@ export default function Home() {
         <div className="bg-inherit w-screen">
           <section
             id="skills"
-            className="h-screen w-screen grid grid-flow-col grid-cols-3 grid-rows-2 z-20 pt-20 text-6xl relative"
+            className="h-screen w-screen grid grid-flow-col grid-cols-3 grid-rows-2 z-20 pt-20 px-6 text-6xl relative cursor-none"
           >
-            <div>
+            <div className="space-y-10">
               <h1 className="text-4xl font-bold ml-2 font-mono bg-gradient-to-b from-white to-slate-300 bg-clip-text text-transparent">
                 Frameworks:
               </h1>
-              <div className="flex flex-row my-3 ml-4 gap-x-4">
+              <div className="flex flex-row my-3 ml-4 gap-x-10">
                 <SiNextdotjs style={{ fill: "url(#icons-gradient)" }} />
                 <FaReact style={{ fill: "url(#icons-gradient)" }} />
               </div>
             </div>
-            <div>
+            <div className="space-y-10">
               <h1 className="text-4xl font-bold ml-2 font-mono bg-gradient-to-b from-white to-slate-300 bg-clip-text text-transparent">
                 UI Libraries:
               </h1>
-              <div className="flex flex-row my-3 ml-4 gap-x-4">
+              <div className="flex flex-row my-3 ml-4 gap-x-10">
                 <SiNextui style={{ fill: "url(#icons-gradient)" }} />
                 <SiTailwindcss style={{ fill: "url(#icons-gradient)" }} />
               </div>
             </div>
-            <div>
+            <div className="space-y-10">
               <h1 className="text-4xl font-bold ml-2 font-mono bg-gradient-to-b from-white to-slate-300 bg-clip-text text-transparent">
                 Languages:
               </h1>
-              <div className="flex flex-row my-3 w-2/3 ml-4 gap-x-4 flex-wrap">
+              <div className="flex flex-row my-3 w-2/3 ml-4 gap-x-10 gap-y-5 flex-wrap">
                 <IoLogoJavascript style={{ fill: "url(#icons-gradient)" }} />
                 <BiLogoTypescript
                   className="text-7xl -mt-1"
@@ -285,27 +285,37 @@ export default function Home() {
                 <FaCss3Alt style={{ fill: "url(#icons-gradient)" }} />
               </div>
             </div>
-            <div>
+            <div className="space-y-10">
               <h1 className="text-4xl font-bold ml-2 font-mono bg-gradient-to-b from-white to-slate-300 bg-clip-text text-transparent">
                 Databases:
               </h1>
-              <div className="flex flex-row my-3 ml-4 gap-x-4">
+              <div className="flex flex-row my-3 ml-4 gap-x-10">
                 <SiSupabase style={{ fill: "url(#icons-gradient)" }} />
                 <BiLogoPostgresql style={{ fill: "url(#icons-gradient)" }} />
                 <SiFirebase style={{ fill: "url(#icons-gradient)" }} />
               </div>
             </div>
-            <div>
+            <div className="space-y-10">
               <h1 className="text-4xl font-bold ml-2 font-mono bg-gradient-to-b from-white to-slate-300 bg-clip-text text-transparent">
                 Version Control:
               </h1>
-              <div className="flex flex-row my-3 ml-4 gap-x-4">
+              <div className="flex flex-row my-3 ml-4 gap-x-10">
                 <FaGitAlt style={{ fill: "url(#icons-gradient)" }} />
               </div>
             </div>
           </section>
         </div>
       </div>
+      <footer className="z-20 pt-10 pb-10 bg-inherit text-gray-400 text-center">
+        <div>Contact me at:</div>
+        <a
+          href="mailto:t.mouinet@gmail.com"
+          target="_blank"
+          className="transition-all hover:text-purple-800 hover:text-xl duration-700"
+        >
+          t.mouinet@gmail.com
+        </a>
+      </footer>
     </main>
   );
 }
