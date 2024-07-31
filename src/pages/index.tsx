@@ -14,6 +14,7 @@ import {
   SiSupabase,
   SiFirebase,
   SiTypescript,
+  SiExpress,
 } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
@@ -259,6 +260,7 @@ export default function Home() {
               <div className="flex flex-row my-3 ml-4 gap-x-10">
                 <SiNextdotjs style={{ fill: "url(#icons-gradient)" }} />
                 <FaReact style={{ fill: "url(#icons-gradient)" }} />
+                <SiExpress style={{ fill: "url(#icons-gradient)" }} />
               </div>
             </div>
             <div className="space-y-10">
